@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coreui/coreui": "^5.1.0",
+    "@coreui/react": "^5.1.0",
+    "@coreui/react-pro": "^5.2.0",
     "@monaco-editor/react": "^4.6.0",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
