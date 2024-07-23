@@ -56,7 +56,7 @@ const SingleProductPage = async ({ params }) => {
               rows={10}
               placeholder={product.desc}
             ></textarea>
-            '<button>Update</button>
+            <button>Update</button>
           </form>
         </div>
       </div>
