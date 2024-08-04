@@ -7,6 +7,7 @@ export default function Home() {
       Homepage
       <br />
       <Link href="/dashboard">Go To DashBoard</Link>
+      <Link href="/squares">Go To Sqaures</Link>
     </main>
   );
 }

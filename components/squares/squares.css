@@ -1,0 +1,17 @@
+.squares-container {
+    display:grid;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+.squares-container .square{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    border: 1px solid red;
+    cursor: pointer;
+}
