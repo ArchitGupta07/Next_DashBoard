@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Square from "@/components/squares/square";
 import "@/components/squares/squares.css";
+import Timer from "@/components/squares/timer";
 
 const Squares = () => {
   const [current, setCurrent] = useState(null);
@@ -46,6 +47,7 @@ const Squares = () => {
       ))}
 
       <div className="name">{current.name}</div>
+      <Timer initialSeconds={0} />
     </div>
   );
 };
