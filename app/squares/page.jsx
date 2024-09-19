@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Square from "@/components/squares/square";
 import "@/components/squares/squares.css";
 import Timer from "@/components/squares/timer";
+import examData from "@/components/mockData/mockTests";
+import QuesDisplay from "@/components/squares/quesDisplay/quesDisplay";
 
 const Squares = () => {
   const [current, setCurrent] = useState(null);
@@ -25,13 +27,14 @@ const Squares = () => {
     if (savedCurrent) {
       setCurrent(JSON.parse(savedCurrent));
     } else {
-      setCurrent({ id: 1, name: "Alice" });
+      setCurrent(examData.exam.questions[0]);
+      console.log(current);
     }
     setIsLoaded(true);
   }, []);
 
-  const toggle = (id, name) => {
-    const newCurrent = { id, name };
+  const toggle = (id) => {
+    const newCurrent = examData.exam.questions.find((ques) => ques.id === id);
     setCurrent(newCurrent);
     localStorage.setItem("current", JSON.stringify(newCurrent));
   };
@@ -42,11 +45,14 @@ const Squares = () => {
 
   return (
     <div className="squares-container">
-      {people.map((item) => (
-        <Square key={item.id} toggle={toggle} id={item.id} name={item.name} />
+      {examData.exam.questions.map((ques) => (
+        <Square key={ques.id} toggle={toggle} id={ques.id} />
       ))}
 
-      <div className="name">{current.name}</div>
+      <div className="name">
+        <QuesDisplay ques={current} />
+        <button>Submit and next</button>
+      </div>
       <Timer initialSeconds={0} />
     </div>
   );

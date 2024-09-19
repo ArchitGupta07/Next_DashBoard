@@ -1,0 +1,39 @@
+.container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: black;
+  }
+  
+  .quesBody {
+    margin-bottom: 20px;
+  }
+  
+  .questionText {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .optionsList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .optionItem {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .optionItem:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .radioInput {
+    margin-right: 10px;
+  }
+  

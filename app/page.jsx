@@ -8,6 +8,7 @@ export default function Home() {
       <br />
       <Link href="/dashboard">Go To DashBoard</Link>
       <Link href="/squares">Go To Sqaures</Link>
+      <Link href="/movieStills">Go To MovieStills</Link>
     </main>
   );
 }
